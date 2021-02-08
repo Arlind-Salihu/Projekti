@@ -1,0 +1,335 @@
+/*Ky CSS është i perbashket dhe vlenë për faqet: "Home.html","Prezentimi.html",
+"Kufjet.html","Iphone12.html","Laptopi.html","AppleWatch.html","RrethNesh.html"*/
+
+/*Kjo pjese vlen per stilizimin ne pjesen e Body-t*/
+body {
+    margin: 0;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../foto/backgr.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /*navbar statik*/
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background: #ddd;
+  color: black;
+}
+#logoutButton{
+  border: none;
+  outline: 0;
+  padding: 8px;
+  color: white;
+  background-color: green;
+  text-align: center;
+  cursor: pointer;
+  width: 100px;
+  height:50px;
+  font-size: 14px;
+  margin-right: 0%;
+  margin-top:20px;
+  border-radius:4px;
+  }
+  #logoutButton{
+    border: none;
+    outline: 0;
+    padding: 8px;
+    color: white;
+    background-color: green;
+    text-align: center;
+    cursor: pointer;
+    width: 100px;
+    height:50px;
+    font-size: 14px;
+    margin-right: 0%;
+    margin-top:20px;
+    border-radius:4px;
+    }
+#logoutButton{
+  border: none;
+  outline: 0;
+  padding: 8px;
+  color: white;
+  background-color: green;
+  text-align: center;
+  cursor: pointer;
+  width: 100px;
+  height:50px;
+  font-size: 14px;
+  margin-right: 0%;
+  margin-top:20px;
+  border-radius:4px;
+  }
+  
+
+  /* Krijoni tre kolona të barabarta që notojnë pranë njëra-tjetrës */
+.column1 {display:flex;/* Slajdi"*/
+  float: left;
+  width: 7%;
+  padding: 10px;
+  height: 420px;
+  justify-content: center; 
+}
+.column2 {display:flex; /* Slajdi"*/
+  float: left;
+  width: auto;
+  padding: 10px;
+  height: 420px;
+  justify-content: center; 
+}
+.column3 {display:flex; /* Slajdi"*/
+  float: left;
+  width:5%;
+  padding: 10px;
+  height: 420px;
+  justify-content: center; 
+}
+
+/* Lundron qartë pas kolonave */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  justify-content: center;
+}
+.row{
+  justify-content: center;
+}
+
+/*butoni i majt i slajdit*/
+.button_majtas{
+background-color:#333;	
+width: 100px;
+margin-top: 170px;
+margin-bottom:170px;
+color:white;
+justify-content: center;
+}
+/*butoni i djatht i slajdit*/
+.button_djathtas{
+background-color:#333;	
+width: 100px;
+margin-top: 170px;
+margin-bottom:170px;
+color:white;
+justify-content: center;
+}
+/*Slajdi pozita*/		
+fieldset{
+	width:40%;
+  border:1px solid;
+  justify-content: center;
+  }
+/*Kjo pjese vlen per pjesen e nav - ne menyne TOP */
+  .topnav {
+    display: flex;
+    overflow: hidden;
+    background-color: #333;
+    justify-content: center;
+    opacity: 0.8;
+  }
+/*Kjo pjese vlen per pjesen e nav - ne menyne TOP - href-i  */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  /*Kjo pjese paraqet ngjyren e tekstit dhe hijezimin prapa pjeses se href-it tek meny TOP  */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: red;
+  }
+  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .mySlides {display:none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+
+/*Kufje.html*/
+#statik{
+  display: flex;
+  justify-content: center;
+}
+#titullikufje{
+  display: flex;
+  margin-left: 0px;
+  justify-content: center;
+}
+.fotomySlides {display:flex;
+  width: 100%;
+  height: 100%;
+  margin-left: 0px;
+  justify-content: center;
+}
+#pteksti{
+  display: block;
+  margin-top: -300px;
+  margin-left: 420px;
+  justify-content: center;
+}
+.butonitekst{
+  margin-left: 400px;
+  justify-content: center;
+}
+
+/*Produktet.html*/
+#addbutton{
+  margin-left: 400px;
+}
+ #addbutton2{
+  margin-left: 510px;
+}
+#addbutton3{
+ margin-left: 464px;
+}
+#addbutton4{
+ margin-left: 450px;
+}
+#btndetail{
+ margin-left: 10px;
+ font-size: 14px;
+}
+#prd{
+  margin-left: 20px;
+}
+#fotocard{
+  float: left;
+  justify-content: center;
+}
+.social{
+ margin:0px;
+ padding:20px;
+ border-radius: 8px;
+
+}
+
+input[type=submit] {
+ background-color: #4CAF50;
+ color: white;
+}
+.card {
+ display: flex;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ justify-content: center;
+ font-family: arial;
+ margin-top:5px;
+ margin-bottom:5px;
+ color: white;
+}
+.card button {
+ border: none;
+ outline: 0;
+ padding: 8px;
+ color: white;
+ background-color: green;
+ text-align: center;
+ cursor: pointer;
+ width: 100px;
+ height:50px;
+ font-size: 14px;
+ margin-right: 0%;
+ margin-top:20px;
+ border-radius:4px;
+ }
+.card button:hover {
+ opacity: 0.7;
+ }
+
+ /*Prezentimi*/
+ #detyra,#prezentimi{
+   display:flex;
+   background-color:#ddd;
+   max-width: 600px;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   border:1px solid;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   flex-wrap: wrap;
+   width: 100%;
+   justify-content: center;
+  }
+  
+  .col-25{
+    width: 100%;
+  }
+ li{
+   display: block;
+   float: left;
+   color: #121212;
+   width: 100%;
+   font-size: 16px;
+   line-height: 20px;
+   font-weight: 700;
+}
+ #divfill{
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ #divfill2{
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
+   align-items: center;
+   margin-top: 100px
+}
+ #myLegend{
+   width: 500px; 
+}
+  /**********************************/
+  /********** Footer CSS ************/
+  /**********************************/
+  .footer {
+    display: flex;
+    margin-left: -17px;
+    justify-content: center;
+    position: relative;
+    padding: 1px 0 0 0;
+    background: #111111;
+    color: white;
+    height:300px;
+  }
+  .footer .social a {
+    display: inline-block;
+    margin: 10px 5px 0 0;
+    width: 120px;
+    height: 35px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 18px;
+    background: #ffffff;
+    border-radius: 4px;
+  }
+  .footer .social a i{
+    color: #111111;
+  }
+  .footer .social a:hover {
+      background: #FF6F61;
+  }

@@ -1,0 +1,54 @@
+
+/* Filon stilimi per faqenCheckoutCard */
+*{margin: 0 auto; padding: 0 auto; }
+body{
+    background-image: url("../foto/backgr.jpg");
+    background-size: cover;
+    height: 450px;
+    justify-content: center;
+}
+/*Pagesa u perfundua me SUKSES!*/
+#p1{
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin-top: 20px;
+}
+/*foto konfirmimi*/
+#i1{
+    justify-content: center;
+}
+
+/*Produkti do te arrije brenda 24 - 48 ore*/
+#p2{
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+/*Kthehu tek Ballina dhe del nga  A&V Web*/
+
+#border3{
+	border-radius:8px; 
+	margin-top:10%;
+	border: 1px solid black;
+	width: 30%;
+	height: auto;
+    background-color: lightgreen;
+    justify-content: center;
+}
+#border3 img{
+    justify-content: center;
+    margin-left: 140px;
+}
+#button1, #button2{
+    border: none;
+    outline: 0;
+    padding: 8px;
+    color: white;
+    background-color: green;
+    cursor: pointer;
+    width: 110px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 4px;
+}

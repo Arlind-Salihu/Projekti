@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-image: url("../foto/backgr.jpg");
+    background-size: cover;
+    justify-content: center; 
+    align-items: center;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  #divdefault{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+    float: left;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 16px;
+    background-image: url('../foto/black.png');
+    color: wheat;
+  }
+  
+  .card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-section {
+    padding: 50px;
+    margin-left: -20px;
+    justify-content: center; 
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+    justify-content: center;
+  }
+  
+  .container {
+    padding: 0 16px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+  }
+  
+  .title {
+    color: lightblue;
+  }
+  
+  .button {
+    justify-content: center; 
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    justify-content: center; 
+    background-color: #555;
+  }

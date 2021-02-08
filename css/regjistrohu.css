@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../foto/black.png");
+  background-size: cover;
+  color: white;
+}
+#all{
+  justify-content: center;
+}
+#main{
+  float: left;
+  justify-content: center;
+}
+/*Titulli*/
+#rtitulli{
+  margin-left: 160px;
+}
+.container{
+    margin-top: -30px;
+    margin-left: 100px;
+    display: flex;
+    color: white;
+    padding: 20px;
+    width: 300px;
+}
+/* Stili i inputit */
+input {
+  width: 30%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  height: 35px;
+}
+
+input {
+  width: 300px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+/* Stili i paraqitjes se butonit */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+/*flex2*/
+#flex2{
+  float: right;
+  margin-right: 200px;
+  margin-top: 150px;
+}
+
+/*linku*/
+#linku{
+  text-decoration: none;
+  color: green;
+}
