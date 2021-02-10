@@ -6,6 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link href="css/styleproduct.css" rel="stylesheet">
-	<link href="css/rrethnesh" rel="stylesheet">
+	<link href="stilicss/styleproduct.css" rel="stylesheet">
+	<link href="stilicss/rrethnesh" rel="stylesheet">
 </head>

@@ -1,16 +1,13 @@
 <?php 
-
-session_start();
-include 'connect.php';
+ include ('server.php') ?>
 
 
 
-?>
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title>Regjistrimi</title>
+	<title>Login</title>
 	<link rel="icon" href="foto/logo2.jpg" type="image/x-icon">
 	<link rel="stylesheet" href="css/regjistrohu.css">
 </head>
@@ -23,16 +20,16 @@ include 'connect.php';
 			<!-- div-i Krijo llogarine-->
 			<div class="container">
 				  <form method="post" action="login.php">
-
-					  <form method="post" action="regjistrimi.php">
+					<?php include('errors.php'); ?>
+					<form method="post" action="login.php">
 					  
 					<label for="name">Emri:</label>
-					<input type="text" placeholder="Shkruani emrin" name="username" id="t1" autocomplete="off"/>
-	
-					<label for="psw">Fjalëkalimi:</label>
-					<input type="password" placeholder="Shkruani fjalëkalimin" name="password" id="t4" class="tb" autocomplete="new-password" />
+					<input type="text" placeholder="Shkruani emrin" name="emri" id="emri"   required />
 
-				<input type="submit" value="Identifikohuni"name="login_user" class="btn"  />
+					<label for="psw">Fjalëkalimi:</label>
+					<input type="password" placeholder="Shkruani fjalëkalimin" name="flk" id="t4" class="tb" required  />
+
+					<input type="submit" value="Identifikohuni"name="login_user" class="btn"  />
 			
         <p>Keni një llogari ? Nëse nuk keni një llogari, hapeni duke klikuar <a id="linku" href="Regjistrohu.php">KETU!</a></p>
 	
@@ -47,18 +44,20 @@ include 'connect.php';
 		</div>
 		<!-- div-i kryesor perfundon ketu -->
 		<div id="flex2">
-			<img src="logo2.png" alt="logo" width="400px" height="300px">
+			<img src="foto/logo2.jpg" alt="logo" width="400px" height="300px">
 		</div>
 	</div>
 </body>
- Admin
+
+
 <script>
 
+	
 	function registration() {
 
-		var name = document.getElementById("t1").value;
+		var name = document.getElementById("emri").value;
 		var email = document.getElementById("t2").value;
-		var uname = document.getElementById("t3").value;
+	//	var uname = document.getElementById("t3").value;
 		var pwd = document.getElementById("t4").value;
 		var cpwd = document.getElementById("t5").value;
 
@@ -71,14 +70,14 @@ include 'connect.php';
 
 		if (name == '') {
 			alert('Ju lutemi shkruani emrin tuaj');
-			document.getElementById("t1").style.color = "black"
+			document.getElementById("emriPrd").style.color = "black"
 
 
 		}
 		else if (!letters.test(name)) {
 
 			alert('Fusha e emrit kërkonte vetëm karaktere alfabeti');
-			document.getElementById("t1").value = placeholder = "";
+			document.getElementById("emriPrd").value = placeholder = "";
 
 		}
 		else if (email == '') {
@@ -93,11 +92,11 @@ include 'connect.php';
 			alert('Ju lutemi shkruani emrin e përdoruesit.');
 
 		}
-		else if (!letters.test(uname)) {
+		//else if (!letters.test(uname)) {
 
-			alert('Fusha e Perdoruesit kërkonte vetëm karaktere alfabeti');
-			document.getElementById("t3").value = placeholder = "";
-		}
+		//	alert('Fusha e Perdoruesit kërkonte vetëm karaktere alfabeti');
+		//	document.getElementById("t3").value = placeholder = "";
+	//	}
 		else if (!letters.test(uname)) {
 			alert('Fusha e emrit të përdoruesit kërkohet të ketë vetëm karaktere alfabeti');
 		}
@@ -130,7 +129,7 @@ include 'connect.php';
 
 
 		else if (pwd === cpwd) {
-			window.open("LogIn.php")
+			window.open("login.php")
 			alert('Tani jeni të regjistruar ');
 		}
 
@@ -138,33 +137,6 @@ include 'connect.php';
 	}
 
 
-
-
-
 </script>
 
 </html>
-<?php 
-if ($_SERVER['REQUEST_METHOD'] == 'POST')
-{
-    $username = $_POST['username'];
-    $password= sha1($_POST['password']);
-
-    $stmt= $conn->prepare("SELECT * FROM users WHERE username =? AND password = ? LIMIT 1");
-    $stmt->execute(array($username, $password));
-    $checkuser = $stmt->rowCount();
-    $user = $stmt->fetch();
-
-    if($checkuser > 0){
-        $_SESSION['user']= $user['username'];
-        $_SESSION['type']= $user['type'];
-        header('location: http://localhost/A_V_projekti/admin/azhuro_perdoruesit.php');
-	}
-	else if($checkuser == 0){
-		$_SESSION['user']= $user['username'];
-		$_SESSION['type']= $user['type'];
-		
-		header('location: home.php');
-	}
-}
-?>

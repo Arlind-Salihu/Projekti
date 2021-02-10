@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 // inicializimi i ndryshoreve
 $emri = "";
@@ -46,8 +46,7 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) == 0) {
   	$flk = md5($flk_2);// kriptoni fjalëkalimin para se ta ruani në bazën e të dhënave
 
-  	$query = "INSERT INTO perdoruesi (emri, email, flk) 
-  			  VALUES('$emri', '$email', '$flk')";
+  	$query = "INSERT INTO perdoruesi (emri, email, flk) VALUES('$emri', '$email', '$flk')";
   	mysqli_query($db, $query);
   	$_SESSION['emri'] = $emri;
   	$_SESSION['success'] = "Tani jeni identifikuar";
@@ -58,10 +57,10 @@ if (isset($_POST['reg_user'])) {
 // ...
 
 
-// LOGIN USER
 if (isset($_POST['login_user'])) {
   $emri = mysqli_real_escape_string($db, $_POST['emri']);
   $flk = mysqli_real_escape_string($db, $_POST['flk']);
+  $roli = mysqli_real_escape_string($db, $_POST['roli']);
 
   if (empty($emri)) {
   	array_push($errors, "Kërkohet përdoruesi");
@@ -72,12 +71,57 @@ if (isset($_POST['login_user'])) {
 
   if (count($errors) == 0) {
   	$flk = md5($flk);
-  	$query = "SELECT * FROM perdoruesi WHERE emri='$emri' AND flk='$flk'";
+  	$query = "SELECT * FROM user WHERE emri='$emri' AND flk='$flk' AND roli=$roli";
   	$results = mysqli_query($db, $query);
-  	if (mysqli_num_rows($results) == 1) {
+  	if (mysqli_num_rows($results) == 1 && $roli==0) {
   	  $_SESSION['emri'] = $emri;
   	  $_SESSION['success'] = "Tani jeni identifikuar";
+  	  header('location: home.php');
+  	}else if(mysqli_num_rows($results) == 1 && $roli==1){
+      $_SESSION['emri'] = $emri;
+  	  $_SESSION['success'] = "Tani jeni identifikuar";
+      header('location: admin/azhuro_perdoruesit.php');
+    }else {
+  		array_push($errors, "Kombinimi i gabuar i emrit të përdoruesit / fjalëkalimit");
+  	}
+  }
+}
+
+// LOGIN USER
+
+if (isset($_POST['login_user'])) {
+  $emri = mysqli_real_escape_string($db, $_POST['emri']);
+  $flk = mysqli_real_escape_string($db, $_POST['flk']);
+  $roli = mysqli_real_escape_string($db, $_POST['roli']);
+
+  if (empty($emri)) {
+  	array_push($errors, "Kërkohet përdoruesi");
+  }
+  if (empty($flk)) {
+  	array_push($errors, "Kërkohet fjalëkalimi");
+  }
+
+  if ($_SERVER['REQUEST_METHOD'] == 'POST' && count($errors) == 0) {
+    $emri = $_POST['emri'];
+    $flk= sha1($_POST['flk']);
+    $roli= $_POST['roli'];
+
+    $stmt= "SELECT * FROM perdoruesi WHERE emri =? AND flk = ? AND roli=?";
+    $result = mysqli_query($db, $stmt);
+    $user = mysqli_fetch_assoc($result);
+  
+    
+  	if ($result == 0) {
+  	  $_SESSION['emri'] = $emri['emri'];
+      $_SESSION['roli']= $user['roli'];
+  	  $_SESSION['success'] = "Tani jeni identifikuar";
   	  header("Location: http://localhost/A_V_projekti/Home.php");
+    }
+    else if ($result == 1) {
+  	$_SESSION['emri'] = $emri['emri'];
+    $_SESSION['roli']= $user['roli'];
+  	$_SESSION['success'] = "Tani jeni identifikuar";
+  	header("Location: http://localhost/A_V_projekti/admin/azhuro_perdoruesit.php");
   	}else {
   		array_push($errors, "Kombinimi i gabuar i emrit të përdoruesit / fjalëkalimit");
   	}

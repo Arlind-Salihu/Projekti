@@ -1,6 +1,6 @@
 <?php
 
-$dsn='mysql:host=localhost;dbname=a_v_projekti';
+$dsn='mysql:host=localhost;dbname=prova';
 $user='root';
 $pass='';
 $option= array(
