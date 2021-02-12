@@ -1,7 +1,7 @@
 <?php include('server.php') ?>
-<?php include('includes/nav_top.php') ?>
+<?php include('../includes/nav_top.php') ?>
 <body>
-<?php include('includes/nav_bar.php') ?>
+<?php include('../includes/nav_bar.php') ?>
 
 
 <?php
@@ -53,7 +53,8 @@ switch($_GET["action"]) {
 <HTML>
 <HEAD>
 <TITLE>Shporta e thjeshtë PHP</TITLE>
-<link href="style_shporta.css" type="text/css" rel="stylesheet" />
+<link href="../stilicss/styleproduct.css" rel="stylesheet">
+<link href="../stilicss/style_shporta.css" type="text/css" rel="stylesheet" />
 </HEAD>
 
 <style>
@@ -91,7 +92,7 @@ if(isset($_SESSION["cart_item"])){
         $item_qmimi = $item["sasia"]*$item["qmimi"];
 		?>
 				<tr>
-				<td><img src="<?php echo $item["image"]; ?>" class="cart-item-image" /><?php echo $item["name"]; ?></td>
+				<td><img src="../foto/<?php echo $item["image"]; ?>" class="cart-item-image" /><?php echo $item["name"]; ?></td>
 				<td><?php echo $item["kodi"]; ?></td>
 				<td style="text-align:right;"><?php echo $item["sasia"]; ?></td>
 				<td  style="text-align:right;"><?php echo " ".$item["qmimi"]; ?></td>
@@ -134,7 +135,7 @@ if(isset($_SESSION["cart_item"])){
 	?>
 		<div class="product-item">
 			<form method="post" action="shporta.php?action=add&kodi=<?php echo $product_array[$key]["kodi"]; ?>">
-			<div class="product-image"><img src="<?php echo $product_array[$key]["image"]; ?>"></div>
+			<div class="product-image"><img src="../foto/<?php echo $product_array[$key]["image"]; ?>"></div>
 			<div class="product-tile-footer">
 			<div class="product-title"><?php echo $product_array[$key]["emriProdukti"]; ?></div>
 			<div class="product-qmimi"><?php echo "".$product_array[$key]["qmimi"]; ?></div>

@@ -1,10 +1,10 @@
-<?php include('includes/nav_top.php') ?>
+<?php include('../includes/nav_top.php') ?>
 <body>
-<?php include('includes/nav_bar.php') ?>
+<?php include('../includes/nav_bar.php') ?>
  
   <div style="padding-left:16px">
   </br></br></br></br>
-
+<link href="../stilicss/styleproduct.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <div id="backfoto2">

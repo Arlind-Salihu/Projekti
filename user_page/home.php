@@ -1,8 +1,9 @@
-<?php include('includes/nav_top.php') ?>
+<?php include('../includes/nav_top.php') ?>
 
 <body>
 
-<?php include('includes/nav_bar.php') ?>
+<?php include('../includes/nav_bar.php') ?>
+<link href="../stilicss/styleproduct.css" rel="stylesheet">
 	<div id="divfill2">
 				<center>
 		<fieldset>
@@ -17,12 +18,12 @@
 
 								<div class=" wdisplay-container">
 
-									<img class="mySlides" src="foto/headphones.png" alt="headphones" style="width:400px"
+									<img class="mySlides" src="../foto/headphones.png" alt="headphones" style="width:400px"
 										style="height: 20px;">
-									<img class="mySlides" src="foto/laptop.png" alt="laptop" style="width:400px"
+									<img class="mySlides" src="../foto/laptop.png" alt="laptop" style="width:400px"
 										style="height: 20px;">
 									
-									<img class="mySlides" src="foto/applewatch.png" alt="applewatch" style="width:400px"
+									<img class="mySlides" src="../foto/applewatch.png" alt="applewatch" style="width:400px"
 										style="height: 20px;">
 								</div>
 							</div>
@@ -40,7 +41,7 @@
 
 
 	<!--Ketu fillon footer-->
-<?php include('includes/footer.php') ?>
+<?php include('../includes/footer.php') ?>
 </body>
 <script>
 document.getElementById("home").style.background = "green";

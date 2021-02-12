@@ -1,5 +1,5 @@
 <?php 
- include ('server.php') ?>
+ include ('../user_page/server.php') ?>
 
 
 
@@ -9,7 +9,7 @@
 <head>
 	<title>Login</title>
 	<link rel="icon" href="foto/logo2.jpg" type="image/x-icon">
-	<link rel="stylesheet" href="css/regjistrohu.css">
+	<link rel="stylesheet" href="../stilicss/regjistrohu.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
 			<!-- div-i Krijo llogarine-->
 			<div class="container">
 				  <form method="post" action="login.php">
-					<?php include('errors.php'); ?>
+					<?php include('../user_page/errors.php'); ?>
 					<form method="post" action="login.php">
 					  
 					<label for="name">Emri:</label>
@@ -31,7 +31,7 @@
 
 					<input type="submit" value="Identifikohuni"name="login_user" class="btn"  />
 			
-        <p>Keni një llogari ? Nëse nuk keni një llogari, hapeni duke klikuar <a id="linku" href="Regjistrohu.php">KETU!</a></p>
+        <p>Keni një llogari ? Nëse nuk keni një llogari, hapeni duke klikuar <a id="linku" href="regjistrohu.php">KETU!</a></p>
 	
 
 
@@ -44,7 +44,7 @@
 		</div>
 		<!-- div-i kryesor perfundon ketu -->
 		<div id="flex2">
-			<img src="foto/logo2.jpg" alt="logo" width="400px" height="300px">
+			<img src="../foto/logo2.jpg" alt="logo" width="400px" height="300px">
 		</div>
 	</div>
 </body>

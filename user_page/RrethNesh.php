@@ -1,14 +1,15 @@
-<?php include('includes/nav_top.php') ?>
+<?php include('../includes/nav_top.php') ?>
 
 <body>
 
-<?php include('includes/nav_bar.php') ?>
+<?php include('../includes/nav_bar.php') ?>
 <html>
 	<div style="padding-left:16px">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-            <link href="stilicss/rrethnesh.css" rel="stylesheet">
+		<link href="../stilicss/styleproduct.css" rel="stylesheet">
+            <link href="../stilicss/rrethnesh.css" rel="stylesheet">
             <div class="about-section">
                 <h1>Rreth Nesh</h1>
                 <p>Ketu janë të dhënat rreth dy drejtuesëve të A&V Web Page</p>
@@ -22,7 +23,7 @@
               <div class="row">
                 <div class="column">
                   <div class="card">
-                    <img src="foto/Lindi.jpg" alt="Lindi" width="150px" height="200px">
+                    <img src="../foto/Lindi.jpg" alt="Lindi" width="150px" height="200px">
                     <div class="container">
                       <h2>Arlind Salihu</h2>
                       <p class="title"><b>Full Stack Developer</b></p>
@@ -35,7 +36,7 @@
               
                 <div class="column">
                   <div class="card">
-                    <img src="foto/Toni.jpg" alt="Toni" width="150px" height="230px">
+                    <img src="../foto/Toni.jpg" alt="Toni" width="150px" height="230px">
                     <div class="container">
                       <h2>Veton Bekteshi</h2>
                       <p class="title"><b>Front-End Developer</b></p>

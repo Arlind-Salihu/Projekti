@@ -6,7 +6,7 @@
 <head>
     <title>Pranimi i Pageses</title>
  
-    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="../stilicss/checkout.css">
 </head>
 <style>
 

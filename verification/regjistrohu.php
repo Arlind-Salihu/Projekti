@@ -1,11 +1,11 @@
-<?php include('server.php') ?>
+<?php include ('../user_page/server.php') ?>
 <!DOCTYPE html>
 <html>
 
 <head>
 	<title>Regjistrimi</title>
 	<link rel="icon" href="foto/logo2.jpg" type="image/x-icon">
-	<link rel="stylesheet" href="css/regjistrohu.css">
+	<link rel="stylesheet" href="../stilicss/regjistrohu.css">
 </head>
 
 <body>
@@ -16,8 +16,8 @@
 			<!-- div-i Krijo llogarine-->
 			<div class="container">
 				  <form method="post" action="regjistrohu.php">
-					<?php include('errors.php'); ?>
-					  <form method="post" action="regjistrimi.php">
+					<?php include('../user_page/errors.php'); ?>
+					  <form method="post" action="regjistrohu.php">
 					
 					<label for="name">Emri:</label>
 					<input type="text" placeholder="Shkruani emrin" name="emri" id="t1" onfocus="this.value=''" value="<?php echo $emri;?>" required />
@@ -36,8 +36,8 @@
 					<input type="password" placeholder="Perseriteni fjalëkalimin" name="flk_2" id="t5" class="tb" required  />
                     <!--<button type="submit" class="btn" name="reg_user">Regjistrohu</button>-->
 					
-					<input type="submit" name="reg_user"value="Krijo llogarinë" class="btn" onclick="registration()" />
-					<p>Keni një llogari ? Nëse keni një llogari, identifikohuni duke klikuar <a id="linku" href="LogIn.php">KETU!</a></p>
+					<input type="submit" name="reg_user"value="Krijo llogarinë" class="btn" onclick="registration()"/>
+					<p>Keni një llogari ? Nëse keni një llogari, identifikohuni duke klikuar <a id="linku" href="login.php">KETU!</a></p>
 
 
 
@@ -50,7 +50,7 @@
 		</div>
 		<!-- div-i kryesor perfundon ketu -->
 		<div id="flex2">
-			<img src="foto/logo2.jpg" alt="logo" width="400px" height="300px">
+			<img src="../foto/logo2.jpg" alt="logo" width="400px" height="300px">
 		</div>
 	</div>
 </body>

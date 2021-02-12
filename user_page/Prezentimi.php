@@ -1,8 +1,8 @@
-<?php include('includes/nav_top.php') ?>
+<?php include('../includes/nav_top.php') ?>
 <body>
 
-<?php include('includes/nav_bar.php') ?>
-
+<?php include('../includes/nav_bar.php') ?>
+<link href="../stilicss/styleproduct.css" rel="stylesheet">
     <style>
       .prez {
         margin-left: 0;
