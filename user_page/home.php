@@ -1,9 +1,12 @@
+<?php include('server.php') ?>
 <?php include('../includes/nav_top.php') ?>
 
 <body>
 
 <?php include('../includes/nav_bar.php') ?>
 <link href="../stilicss/styleproduct.css" rel="stylesheet">
+
+
 	<div id="divfill2">
 				<center>
 		<fieldset>
@@ -12,29 +15,33 @@
 				
 				<div class="row">
 						<div class="column1">
-							<button class="button_majtas " onclick="plusSlides(-1, 0)">&#10094;</button>
-						</div>
-							<div class="column2">
+						<?php
+						$db_handle->runQuery("SELECT * FROM tblprodukti ORDER BY id ASC");
+  //total array size
+  $total = sizeof($images)-1;
 
-								<div class=" wdisplay-container">
+  //current position in the array      
+  $k = 0;                      
 
-									<img class="mySlides" src="../foto/headphones.png" alt="headphones" style="width:400px"
-										style="height: 20px;">
-									<img class="mySlides" src="../foto/laptop.png" alt="laptop" style="width:400px"
-										style="height: 20px;">
-									
-									<img class="mySlides" src="../foto/applewatch.png" alt="applewatch" style="width:400px"
-										style="height: 20px;">
-								</div>
-							</div>
-						<div class="column3">
+  //displays the current image
+  if(isset($_GET['pid'])){
+      $k = $_GET['pid'];
+      echo $images[$k]; 
+    }?>
+						<?php echo '<br><a href="index.php?pid='.prevNext($k, $total, -1).'">', $button_left, "</a>";
+echo '    <a href="index.php?pid='.prevNext($k, $total, 1).'">', $button_right, "</a>";
 
-						<button class="button_djathtas " onclick="plusSlides(1, 0)">&#10095;</button>
+function prevNext($k, $t, $d) {
+    return ($r=($k+$d)%$t)>=0?$r:$r+=$t;	
+}
+?>
 						</div>
 				</div>
+				
 			</center>
 		</fieldset>
-		</div>			
+		</div>
+
 	</div>
 	</div>
 </br>

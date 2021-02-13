@@ -14,7 +14,7 @@ switch($_GET["action"]) {
 		if(!empty($_POST["sasia"])) {
 
 	     $productBykodi = $db_handle->runQuery("SELECT * FROM tblprodukti WHERE kodi='" . $_GET["kodi"] . "'");
-			$itemArray = array($productBykodi[0]["kodi"]=>array('name'=>$productBykodi[0]["name"], 'kodi'=>$productBykodi[0]["kodi"], 'sasia'=>$_POST["sasia"], 'qmimi'=>$productBykodi[0]["qmimi"], 'image'=>$productBykodi[0]["image"]));
+			$itemArray = array($productBykodi[0]["kodi"]=>array('emriProdukti'=>$productBykodi[0]["emriProdukti"], 'kodi'=>$productBykodi[0]["kodi"], 'sasia'=>$_POST["sasia"], 'qmimi'=>$productBykodi[0]["qmimi"], 'image'=>$productBykodi[0]["image"]));
 			
 			if(!empty($_SESSION["cart_item"])) {
 				if(in_array($productBykodi[0]["kodi"],array_keys($_SESSION["cart_item"]))) {
@@ -92,7 +92,7 @@ if(isset($_SESSION["cart_item"])){
         $item_qmimi = $item["sasia"]*$item["qmimi"];
 		?>
 				<tr>
-				<td><img src="../foto/<?php echo $item["image"]; ?>" class="cart-item-image" /><?php echo $item["name"]; ?></td>
+				<td><img src="../foto/<?php echo $item["image"]; ?>" class="cart-item-image" /><?php echo $item["emriProdukti"]; ?></td>
 				<td><?php echo $item["kodi"]; ?></td>
 				<td style="text-align:right;"><?php echo $item["sasia"]; ?></td>
 				<td  style="text-align:right;"><?php echo " ".$item["qmimi"]; ?></td>
