@@ -1,5 +1,5 @@
-<?
-include 'server.php';
+<?php
+ include '../user_page/server.php';
 
 // Regjistro përdoruesin
 if (isset($_POST['reg_user'])) {
@@ -38,11 +38,13 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) == 0) {
   	$flk = md5($flk_2);// kriptoni fjalëkalimin para se ta ruani në bazën e të dhënave
 
-  	$query = "INSERT INTO perdoruesi (emri, email, flk) VALUES('$emri', '$email', '$flk')";
+  	$query = "INSERT INTO perdoruesi (emri, email, flk) 
+  			  VALUES('$emri', '$email', '$flk')";
   	mysqli_query($db, $query);
   	$_SESSION['emri'] = $emri;
-  	$_SESSION['success'] = "Tani jeni i identifikuar";
-  	echo "<script>window.close();</script>";
+  	$_SESSION['success'] = "Tani jeni identifikuar";
+  	header('location: index.php');
   }
 }
+
 ?>

@@ -1,10 +1,12 @@
-<?php include ('../user_page/server.php') ?>
+<?php 
+include 'regjistrimidb.php';
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
 	<title>Regjistrimi</title>
-	<link rel="icon" href="foto/logo2.jpg" type="image/x-icon">
+	<link rel="icon" href="../foto/logo2.jpg" type="image/x-icon">
 	<link rel="stylesheet" href="../stilicss/regjistrohu.css">
 </head>
 
@@ -16,7 +18,7 @@
 			<!-- div-i Krijo llogarine-->
 			<div class="container">
 				  <form method="post" action="regjistrohu.php">
-					<?php include('../user_page/errors.php'); ?>
+				
 					  <form method="post" action="regjistrohu.php">
 					
 					<label for="name">Emri:</label>

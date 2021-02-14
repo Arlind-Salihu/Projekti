@@ -8,4 +8,9 @@ $errors = array();
 
 // lidheni me bazën e të dhënave
 $db = mysqli_connect('localhost', 'root', '', 'a_v_projekti');
+
+
+
+
+
 ?>

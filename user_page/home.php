@@ -15,26 +15,7 @@
 				
 				<div class="row">
 						<div class="column1">
-						<?php
-						$db_handle->runQuery("SELECT * FROM tblprodukti ORDER BY id ASC");
-  //total array size
-  $total = sizeof($images)-1;
-
-  //current position in the array      
-  $k = 0;                      
-
-  //displays the current image
-  if(isset($_GET['pid'])){
-      $k = $_GET['pid'];
-      echo $images[$k]; 
-    }?>
-						<?php echo '<br><a href="index.php?pid='.prevNext($k, $total, -1).'">', $button_left, "</a>";
-echo '    <a href="index.php?pid='.prevNext($k, $total, 1).'">', $button_right, "</a>";
-
-function prevNext($k, $t, $d) {
-    return ($r=($k+$d)%$t)>=0?$r:$r+=$t;	
-}
-?>
+					
 						</div>
 				</div>
 				

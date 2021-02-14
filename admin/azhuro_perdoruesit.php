@@ -109,7 +109,6 @@
               <th>Fjalkalimi</th>
 			  <th>Data e regjistrimit</th>
               <th>Data azhurmi</th>
-			  <th>Veprimi</th>
             </tr>
           </thead>
           <tbody>
@@ -120,7 +119,6 @@
 			  <td><?= $row['email']; ?></td>
   			  <td><?= $row['flk']; ?></td>
 			  <td><?= $row['data_regjistrimi']; ?></td>
-			  <td><?= $row['data_azhurimi']; ?></td>
               
               <td>
                 <a href="regjistrohu.php?details=<?= $row['id']; ?>" class="badge badge-primary p-2">Detalet</a> |

@@ -1,5 +1,7 @@
 <?php 
- include ('../user_page/server.php') ?>
+
+ require 'logindb.php'; 
+ ?>
 
 
 
@@ -19,16 +21,16 @@
 			<h2 id="rtitulli">LogIn</h2>
 			<!-- div-i Krijo llogarine-->
 			<div class="container">
-				  <form method="post" action="login.php">
-					<?php include('../user_page/errors.php'); ?>
-					<form method="post" action="login.php">
+				  <form method="POST" action="login.php">
+				
+					<form method="POST" action="login.php">
 					  
 					<label for="name">Emri:</label>
 					<input type="text" placeholder="Shkruani emrin" name="emri" id="emri"   required />
 
 					<label for="psw">Fjalëkalimi:</label>
 					<input type="password" placeholder="Shkruani fjalëkalimin" name="flk" id="t4" class="tb" required  />
-
+					
 					<input type="submit" value="Identifikohuni"name="login_user" class="btn"  />
 			
         <p>Keni një llogari ? Nëse nuk keni një llogari, hapeni duke klikuar <a id="linku" href="regjistrohu.php">KETU!</a></p>
