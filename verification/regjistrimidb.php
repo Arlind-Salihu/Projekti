@@ -43,7 +43,7 @@ if (isset($_POST['reg_user'])) {
   	mysqli_query($db, $query);
   	$_SESSION['emri'] = $emri;
   	$_SESSION['success'] = "Tani jeni identifikuar";
-  	header('location: index.php');
+
   }
 }
 

@@ -38,7 +38,7 @@ include 'regjistrimidb.php';
 					<input type="password" placeholder="Perseriteni fjalëkalimin" name="flk_2" id="t5" class="tb" required  />
                     <!--<button type="submit" class="btn" name="reg_user">Regjistrohu</button>-->
 					
-					<input type="submit" name="reg_user"value="Krijo llogarinë" class="btn" onclick="registration()"/>
+					<input type="submit" name="reg_user"value="Krijo llogarinë" class="btn" onclick="registration()" onSubmit="window.close()"/>
 					<p>Keni një llogari ? Nëse keni një llogari, identifikohuni duke klikuar <a id="linku" href="login.php">KETU!</a></p>
 
 
@@ -135,7 +135,8 @@ include 'regjistrimidb.php';
 
 
 		else if (pwd === cpwd) {
-			window.open("LogIn.php")
+			window.open("login.php")
+			window.close("regjistrohu.php");
 			alert('Tani jeni të regjistruar ');
 		}
 
