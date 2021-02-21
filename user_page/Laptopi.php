@@ -1,26 +1,7 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	<title>Produkti Laptopi</title>
-	<link rel="icon" href="../foto/logo2.jpg" type = "image/x-icon">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link href="../css/styleproduct.css" rel="stylesheet">
-</head>
+<?php include('../includes/nav_top.php') ?>
+<?php include('../includes/nav_bar.php') ?>
 
 <body>
-
-	<div class="topnav">
-		<a class="active" href="../html/Home.html"><i class="fa fa-fw fa-home"></i> Ballina</a>
-		<a href="../html/Produktet.html"><i class=" fa fa-institution"></i> Produktet</a>
-		<a href="../html/RrethNesh.html"><i class="fa fa-user"></i> Rreth Nesh</a>
-		<a href="../html/Prezentimi.html"><i class="fa fa-info"></i> Prezentimi</a>
-		<a href="../html/LogIn.html"><button type="button" class="fa fa-sign-out">Mbyll Llogarinë</button></a>
-	</div>
 
 	<div style="padding-left:16px">
 	</br></br></br></br></br>
@@ -36,7 +17,7 @@
                     Memorie e brendshme GB: 256</br>
                     Modeli i procesorit: 8265U(1.6/3.9GHz 4 bërthama / 8 threads)</br></br>
                     <b>Çmimi: 750.00 €</b></p>
-                    <a href="../html/Produktet.html"><input class="butonitekst" type="button" value="Kthehu tek produktet"></a>
+                    <a href="../user_page/Produktet.php"><input class="butonitekst" type="button" value="Kthehu tek produktet"></a>
 			</div>
 		</div>
 	</div>
