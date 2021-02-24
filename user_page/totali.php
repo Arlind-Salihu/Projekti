@@ -1,5 +1,4 @@
-<?php include('server.php') ?>
-
+<?php include 'server.php' ?>
 <body>
 
 
@@ -66,28 +65,30 @@ switch($_GET["action"]) {
 if(isset($_SESSION["cart_item"])){
     $total_sasia = 0;
     $total_qmimi = 0;
-?>	
-<table class="tbl-cart" cellpadding="5" cellspacing="0.5">
-<tbody>
+?>
+
+
+<table class="col-md-4"  cellspacing="1">
+
 <tr>
 <th style="text-align:left;">Emri</th>
 <th style="text-align:left;">Kodi</th>
-<th style="text-align:right;" width="5%">Sasia</th>
-<th style="text-align:right;" width="10%">Unit qmimi</th>
-<th style="text-align:right;" width="10%">Çmimi</th>
-<th style="text-align:center;" width="5%">Fshie</th>
+<th style="text-align:right;">Sasia</th>
+<th style="text-align:right;">Unit qmimi</th>
+<th style="text-align:right;">Çmimi</th>
+
 </tr>	
 <?php		
     foreach ($_SESSION["cart_item"] as $item){
         $item_qmimi = $item["sasia"]*$item["qmimi"];
 		?>
 				<tr>
-				<td><img src="../foto/<?php echo $item["image"]; ?>" class="cart-item-image" /><?php echo $item["name"]; ?></td>
+				<td><img src="../foto/<?php echo $item["image"]; ?>" class="cart-item-image" /><?php echo $item["emriProdukti"]; ?></td>
 				<td><?php echo $item["kodi"]; ?></td>
 				<td style="text-align:right;"><?php echo $item["sasia"]; ?></td>
 				<td  style="text-align:right;"><?php echo " ".$item["qmimi"]; ?></td>
 				<td  style="text-align:right;"><?php echo " ". number_format($item_qmimi,2); ?></td>
-			<!--	<td style="text-align:center;"><a href="shporta.php?action=remove&code=<?php echo $item["kodi"]; ?>" class="btnRemoveAction"><img src="icon-delete.png" alt="Remove Item" /></a></td>-->
+			<td style="text-align:center;"><a href="shporta.php?action=remove&kodi=<?php echo $item["kodi"]; ?>" class=" fa fa-shopping-cart"> </a></td>
 				</tr>
 				<?php
 				$total_sasia += $item["sasia"];
@@ -99,9 +100,7 @@ if(isset($_SESSION["cart_item"])){
 <td colspan="2" align="right">Totali:</td>
 <td align="right"><?php echo $total_sasia; ?></td>
 <td align="right" colspan="2"><strong><?php echo " ".number_format($total_qmimi, 2); ?></strong></td>
-<td></td>
 </tr>
-</tbody>
 </table>		
   <?php
 } else {

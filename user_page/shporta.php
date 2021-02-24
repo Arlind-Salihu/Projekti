@@ -2,7 +2,7 @@
 <?php include('../includes/nav_top.php') ?>
 <body>
 <?php include('../includes/nav_bar.php') ?>
-
+<link href="../stilicss/style_shporta.css" type="text/css" rel="stylesheet" />
 
 <?php
 
@@ -62,10 +62,10 @@ switch($_GET["action"]) {
 </style>
 
 
-<BODY>
+<body>
 <br><br><br><br>
 <div id="shopping-cart">
- <div><b><a href="CheckoutCard.php"><input id="btndetail" type="button" value="Blej produktet nga shporta""btn"></a> </p></div>
+ <div><b><a href="CheckoutCard.php"><input id="btndetail" type="button" value="Blej produktet nga shporta"></a> </p></div>
   <div class="col-md-4">
 
 
@@ -78,7 +78,7 @@ if(isset($_SESSION["cart_item"])){
 
 
 <table class="col-md-4"  cellspacing="1">
-<tbody>
+
 <tr>
 <th style="text-align:left;">Emri</th>
 <th style="text-align:left;">Kodi</th>
@@ -111,7 +111,7 @@ if(isset($_SESSION["cart_item"])){
 <td align="right" colspan="2"><strong><?php echo " ".number_format($total_qmimi, 2); ?></strong></td>
 </tr>
 <a id="btnEmpty" type="button"  href="shporta.php?action=empty">Shpraze shportën</a>
-</tbody>
+
 
 </table>
 <br>
@@ -124,6 +124,8 @@ if(isset($_SESSION["cart_item"])){
 <?php 
 }
 ?>
+<link href="../stilicss/styleproduct.css" rel="stylesheet">
+<a href="../user_page/Card.php"><button id="addbutton4">Blej</button>
 </div>
 </div>
 <div id="product-grid">

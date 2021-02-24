@@ -4,11 +4,7 @@
 
 <?php include('../includes/nav_bar.php') ?>
 <html>
-	<div style="padding-left:16px">
-
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<link href="../stilicss/styleproduct.css" rel="stylesheet">
+	<div style="padding-left:16px">	
             <link href="../stilicss/rrethnesh.css" rel="stylesheet">
             <div class="about-section">
                 <h1>Rreth Nesh</h1>

@@ -1,19 +1,10 @@
 <?php include('server.php') ?>
 <?php include('../includes/nav_top.php') ?>
-<body>
+
 <?php include('../includes/nav_bar.php') ?>
 
-<HTML>
-<head>
-<TITLE>Shporta e thjeshtë PHP</TITLE>
-<link href="../stilicss/styleproduct.css" rel="stylesheet">
-<link href="../stilicss/style_shporta.css" type="text/css" rel="stylesheet" />
-</head>
-
-
+<html>
 <body>
-<?php include('../includes/nav_bar.php') ?>
- 
   <div style="padding-left:16px">
   </br></br></br></br>
 

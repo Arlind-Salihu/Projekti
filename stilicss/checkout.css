@@ -4,7 +4,7 @@
 body{
     background-image: url("../foto/backgr.jpg");
     background-size: cover;
-    height: 450px;
+    background-repeat: no-repeat;
     justify-content: center;
 }
 /*Pagesa u perfundua me SUKSES!*/

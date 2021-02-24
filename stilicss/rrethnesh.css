@@ -79,3 +79,15 @@ body {
     justify-content: center; 
     background-color: #555;
   }
+
+  @media only screen 
+  and (device-width : 375px) 
+  and (device-height : 812px) 
+  and (-webkit-device-pixel-ratio : 3) { 
+
+.topnav a{
+  width: 50%;
+  height: 20%;
+}
+    
+  }

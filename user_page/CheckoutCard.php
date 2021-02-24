@@ -2,7 +2,7 @@
 
  
 <html>
-<?php include('server.php') ?>
+<?php include 'server.php' ?>
 <head>
     <title>Pranimi i Pageses</title>
  
@@ -31,11 +31,7 @@
 	
 	</center>
    
-	<div 
-	
 
-	
-	</div>
 </body>
 
 </html>
