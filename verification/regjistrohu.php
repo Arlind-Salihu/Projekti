@@ -18,8 +18,6 @@ include 'regjistrimidb.php';
 			<!-- div-i Krijo llogarine-->
 			<div class="container">
 				  <form method="post" action="regjistrohu.php">
-				
-					  <form method="post" action="regjistrohu.php">
 					
 					<label for="name">Emri:</label>
 					<input type="text" placeholder="Shkruani emrin" name="emri" id="t1" onfocus="this.value=''" value="<?php echo $emri;?>" required />

@@ -128,7 +128,7 @@
             <?php while ($row = $result->fetch_assoc()) { ?>
             <tr>
               <td><?= $row['id']; ?></td>
-              <td><img src="<?= $row['image']; ?>" class="cart-item-image" width="30" height="30" ></td>
+              <td><img src="../foto/<?= $row['image']; ?>" class="cart-item-image" width="30" height="30" ></td>
 			      
               <td><?= $row['emriProdukti']; ?></td>
 			  <td><?= $row['kodi']; ?></td>

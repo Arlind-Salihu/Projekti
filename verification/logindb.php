@@ -21,7 +21,7 @@ if (isset($_POST['login_user'])) {
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['emri'] = $emri;
   	  $_SESSION['success'] = "Tani jeni identifikuar si User";
-  	  header('location: ../user_page/home.php');//qetu ja qet faqen e Adminint
+  	  header('location: ../user_page/home.php');
   	}
 
     $query1 = "SELECT * FROM perdoruesi WHERE emri='$emri' AND flk='$flk' AND roli='Admin'";
@@ -29,7 +29,7 @@ if (isset($_POST['login_user'])) {
   	if (mysqli_num_rows($results1) == 1) {
   	  $_SESSION['emri'] = $emri;
   	  $_SESSION['success'] = "Tani jeni identifikuar si Admin";
-  	  header('location: ../admin/azhuro_perdoruesit.php');//qetu ja qet faqen e Adminint
+  	  header('location: ../admin/azhuro_perdoruesit.php');
   	}
   }
 }

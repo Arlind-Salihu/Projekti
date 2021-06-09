@@ -107,7 +107,7 @@
               <th>Emri</th>
               <th>Emaili</th>
               <th>Fjalkalimi</th>
-			  <th>Data e regjistrimit</th>
+			        <th>Data e regjistrimit</th>
               <th>Data azhurmi</th>
             </tr>
           </thead>

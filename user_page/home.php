@@ -10,7 +10,7 @@
 <center>
 		<div>
 			<legend id="myLegend" style="color: white"><b>Lëvizja Manuale e Produkteve</b></legend>
-				
+
 				<div class="row">
 						<div class="column1">
 							<button class="button_majtas " onclick="plusSlides(-1, 0)">&#10094;</button>

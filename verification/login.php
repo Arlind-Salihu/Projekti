@@ -22,16 +22,14 @@
 			<!-- div-i Krijo llogarine-->
 			<div class="container">
 				  <form method="POST" action="login.php">
-				
-					<form method="POST" action="login.php">
-					  
+ 				  
 					<label for="name">Emri:</label>
 					<input type="text" placeholder="Shkruani emrin" name="emri" id="emri"   required />
 
 					<label for="psw">Fjalëkalimi:</label>
 					<input type="password" placeholder="Shkruani fjalëkalimin" name="flk" id="t4" class="tb" required  />
 					
-					<input type="submit" value="Identifikohuni"name="login_user" class="btn"  />
+					<input type="submit" value="Identifikohuni" name="login_user" class="btn"  />
 			
         <p>Keni një llogari ? Nëse nuk keni një llogari, hapeni duke klikuar <a id="linku" href="regjistrohu.php">KETU!</a></p>
 	
@@ -49,6 +47,7 @@
 			<img src="../foto/logo2.jpg" alt="logo" width="400px" height="300px">
 		</div>
 	</div>
+
 </body>
 
 
@@ -57,7 +56,7 @@
 	
 	function registration() {
 
-		var name = document.getElementById("emri").value;
+		var name = document.getElementById("emri");
 		var email = document.getElementById("t2").value;
 	//	var uname = document.getElementById("t3").value;
 		var pwd = document.getElementById("t4").value;
