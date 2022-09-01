@@ -45,7 +45,6 @@
 			  </div>
 			  </div>
 		</div>
-	</div>
 	<!--Ketu fillon footer-->
 	<div class="footer">
 		<div class="container">
@@ -86,7 +85,6 @@
 			</div>
 		</div>
 	</center>
-	</div>
 </body>
 <script>
 document.getElementById("rreth").style.background = "green";

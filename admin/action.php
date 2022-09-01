@@ -18,20 +18,20 @@ session_start();
 	$emri="";
 	$email="";
 	$flk="";
-	$data_azhurimi="";
+	$data_regjistrimi="";
 	
 
 	if(isset($_POST['add'])){
 		$emri=$_POST['emri'];
 		$email=$_POST['email'];
 		$flk=$_POST['flk'];
-		$data_azhurimi=$_POST['data_azhurimi'];
+		$data_regjistrimi=$_POST['data_regjistrimi'];
 	
 
 
-		$query="INSERT INTO perdoruesi(emri,email,flk,data_azhurimi)VALUES(?,?,?,?)";
+		$query="INSERT INTO perdoruesi(emri,email,flk,data_regjistrimi)VALUES(?,?,?,?)";
 		$stmt=$conn->prepare($query);
-		$stmt->bind_param("ssss",$emri,$email,$flk,$data_azhurimi);
+		$stmt->bind_param("ssss",$emri,$email,$flk,$data_regjistrimi);
 		$stmt->execute();
 	
 
@@ -56,7 +56,7 @@ session_start();
 	if(isset($_GET['edit'])){
 		$id=$_GET['edit'];
 
-		$query="SELECT `emri`, `email`, `flk`, `data_azhurimi` FROM `perdoruesi` WHERE id=?";
+		$query="SELECT `emri`, `email`, `flk`, `data_regjistrimi` FROM `perdoruesi` WHERE id=?";
 		$stmt=$conn->prepare($query);
 		$stmt->bind_param("i",$id);
 		$stmt->execute();
@@ -67,7 +67,7 @@ session_start();
 		$emri=$row['emri'];
 		$email=$row['email'];
 		$flk=$row['flk'];
-		$data_azhurimi=$row['data_azhurimi'];
+		$data_regjistrimi=$row['data_regjistrimi'];
 	
 
 		$update=true;
@@ -77,13 +77,13 @@ session_start();
 		$emri=$_POST['emri'];
 		$email=$_POST['email'];
 		$flk=$_POST['flk'];
-		$data_azhurimi=$_POST['data_azhurimi'];
+		$data_regjistrimi=$_POST['data_regjistrimi'];
 		
 
 	
-		$query="UPDATE perdoruesi SET emri=?,email=?,flk=?,data_azhurimi=? WHERE id=?";
+		$query="UPDATE perdoruesi SET emri=?,email=?,flk=?,data_regjistrimi=? WHERE id=?";
 		$stmt=$conn->prepare($query);
-		$stmt->bind_param("ssssi",$emri,$email,$flk,$data_azhurimi,$id);
+		$stmt->bind_param("ssssi",$emri,$email,$flk,$data_regjistrimi,$id);
 		$stmt->execute();
 
 		$_SESSION['response']="Përditësuar me sukses!";
